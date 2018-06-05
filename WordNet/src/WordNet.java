@@ -66,10 +66,6 @@ public class WordNet {
         int s = IDOfNoun(nounA);
         int d = IDOfNoun(nounB);
 
-        // Mark all the vertices as not visited(By default
-        // set as false)
-        String toReturn = "";
-        Integer currDistance = 0;
         int V = Digraph.V();
         boolean visited[] = new boolean[V];
         Integer distance[] = new Integer[V];
@@ -78,82 +74,75 @@ public class WordNet {
 
         // Mark the current node as visited and enqueue it
         visited[s]=true;
-        distance[s] = currDistance;
+        distance[s] = 0;
         queue.add(s);
 
         while (queue.size() != 0)
         {
             // Dequeue a vertex from queue and print it
             s = queue.poll();
-            toReturn += s + "->";
-            if (s == d) {
-                return distance[s];
-            }
+
             // Get all adjacent vertices of the dequeued vertex s
             // If a adjacent has not been visited, then mark it
             // visited and enqueue it
             Iterator<Integer> i = Digraph.adj(s).iterator();
-            currDistance += 1;
+
             while (i.hasNext())
             {
                 int n = i.next();
+
+                if (n == d) {
+                    return distance[n];
+                }
+
                 if (!visited[n])
                 {
                     visited[n] = true;
                     queue.add(n);
-                    if (distance[n] == 0) {
-                        distance[n] = currDistance;
-                    }
+                    distance[n] = distance[s] + 1;
                 }
             }
         }
-    return 0;
+        return 0;
     }
 
+    private Boolean checkIfTwoNodeIsConnected(int s, int d) {
+        int V = Digraph.V();
+        boolean visited[] = new boolean[V];
+        LinkedList<Integer> queue = new LinkedList<>();
+
+        visited[s] = true;
+        queue.add(s);
+
+        while (queue.size() != 0) {
+            s= queue.poll();
+
+            Iterator<Integer> i = Digraph.adj(s).iterator();
+            while (i.hasNext()) {
+                int n = i.next();
+
+                if (n == d) {
+                    return true;
+                }
+                if (!visited[n]) {
+                    visited[n] = true;
+                    queue.add(n);
+                }
+            }
+        }
+        return false;
+
+    }
     // a synset (second field of synsets.txt) that is the common ancestor of nounA and nounB
     // in a shortest ancestral path (defined below)
-    public String sap(Integer s, Integer d) {
-        // Mark all the vertices as not visited(By default
-        // set as false)
-        String toReturn = "";
-        Integer currDistance = 0;
-        int V = Digraph.V();
-        boolean visited[] = new boolean[V];
-        Integer distance[] = new Integer[V];
-        // Create a queue for BFS
-        LinkedList<Integer> queue = new LinkedList<Integer>();
+    public String sap(String nounA, String nounB) {
+        int s = IDOfNoun(nounA);
+        int d = IDOfNoun(nounB);
 
-        // Mark the current node as visited and enqueue it
-        visited[s]=true;
-        distance[s] = currDistance;
-        queue.add(s);
+        
 
-        while (queue.size() != 0)
-        {
-            // Dequeue a vertex from queue and print it
-            s = queue.poll();
-            toReturn += s + "->";
-            if (s == d) {
-                return toReturn;
-            }
-            // Get all adjacent vertices of the dequeued vertex s
-            // If a adjacent has not been visited, then mark it
-            // visited and enqueue it
-            Iterator<Integer> i = Digraph.adj(s).iterator();
-            currDistance += 1;
-            while (i.hasNext())
-            {
-                int n = i.next();
-                if (!visited[n])
-                {
-                    visited[n] = true;
-                    queue.add(n);
-                    distance[n] = currDistance;
-                }
-            }
-        }
-        return s + "->" + "d";
     }
+
 
     // do unit testing of this class
     public static void main(String[] args) {
