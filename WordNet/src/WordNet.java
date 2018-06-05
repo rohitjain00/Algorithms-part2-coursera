@@ -1,7 +1,9 @@
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.Digraph;
 
+import java.awt.*;
 import java.util.*;
+import java.util.List;
 
 import static java.lang.Integer.getInteger;
 import static java.lang.Integer.parseInt;
@@ -139,9 +141,23 @@ public class WordNet {
         int s = IDOfNoun(nounA);
         int d = IDOfNoun(nounB);
 
-        
+        Digraph = Digraph.reverse();
+        String shortestNode = null;
+        int shortestDistance = Digraph.E();
 
-    }
+        while (nouns().iterator().hasNext()) {
+            String nounToSearch = nouns().iterator().next();
+            if (distance(nounA,nounToSearch) == 0 || distance(nounB,nounToSearch) == 0) {
+                continue;
+            }
+            int totalDistance = distance(nounA,nounToSearch) + distance(nounB,nounToSearch);
+            if (shortestDistance > totalDistance) {
+                shortestDistance = totalDistance;
+                shortestNode = nounToSearch;
+            }
+        }
+        return shortestNode;
+     }
 
 
     // do unit testing of this class
