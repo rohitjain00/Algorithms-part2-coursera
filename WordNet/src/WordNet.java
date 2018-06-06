@@ -12,7 +12,6 @@ public class WordNet {
     private Digraph Digraph;
     private ArrayList<ArrayList<String>> nounsArrayList;
     private ArrayList<String> allNouns;
-    private ArrayList<Integer> allNounsIndex;
 
     // constructor takes the name of the two input files
     public WordNet(String synsets, String hypernyms) {
@@ -40,15 +39,14 @@ public class WordNet {
             ArrayList<String> tempArrayList = new ArrayList<>();
             for (int i = 0 ; i < SeperateNouns.size(); i++) {
                 tempArrayList.add(SeperateNouns.get(i));
-                allNouns.add(SeperateNouns.get(i));
-                allNounsIndex.add(parseInt(SeperateCSV.get(0)));
+                allNouns.add(parseInt(SeperateCSV.get(0)),SeperateNouns.get(i));
             }
             nounsArrayList.add(parseInt(SeperateCSV.get(0)),tempArrayList);
         }
     }
 
     private Integer IDOfNoun(String noun) {
-        return allNounsIndex.get(allNouns.indexOf(noun));
+        return allNouns.indexOf(noun);
     }
 
     // returns all WordNet nouns
