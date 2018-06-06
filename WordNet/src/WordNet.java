@@ -1,5 +1,4 @@
-import edu.princeton.cs.algs4.In;
-import edu.princeton.cs.algs4.Digraph;
+import edu.princeton.cs.algs4.*;
 
 import java.awt.*;
 import java.util.*;
@@ -138,25 +137,15 @@ public class WordNet {
     // a synset (second field of synsets.txt) that is the common ancestor of nounA and nounB
     // in a shortest ancestral path (defined below)
     public String sap(String nounA, String nounB) {
-        int s = IDOfNoun(nounA);
-        int d = IDOfNoun(nounB);
+        int v = IDOfNoun(nounA);
+        int w = IDOfNoun(nounB);
 
-        Digraph = Digraph.reverse();
-        String shortestNode = null;
-        int shortestDistance = Digraph.E();
+        BreadthFirstDirectedPaths BFSV = new BreadthFirstDirectedPaths(Digraph,v);
+        BreadthFirstDirectedPaths BFSW = new BreadthFirstDirectedPaths(Digraph,w);
+        SAP sap = new SAP(Digraph);
+        int ancestors = sap.ancestor(v,w);
 
-        while (nouns().iterator().hasNext()) {
-            String nounToSearch = nouns().iterator().next();
-            if (distance(nounA,nounToSearch) == 0 || distance(nounB,nounToSearch) == 0) {
-                continue;
-            }
-            int totalDistance = distance(nounA,nounToSearch) + distance(nounB,nounToSearch);
-            if (shortestDistance > totalDistance) {
-                shortestDistance = totalDistance;
-                shortestNode = nounToSearch;
-            }
-        }
-        return shortestNode;
+        return BFSV.pathTo(ancestors).toString()+BFSW.pathTo(ancestors).toString();
      }
 
 
