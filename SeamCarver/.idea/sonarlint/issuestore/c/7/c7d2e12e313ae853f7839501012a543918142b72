@@ -1,16 +1,19 @@
 
+Usquid:S1068"2Remove this unused "sourceVertical" private field.(‡¸¥Úşÿÿÿÿ8á¯ŠŸÀ,
+Wsquid:UnusedPrivateMethod"+Remove this unused private "xyTo1D" method.(¹Îû8á¯ŠŸÀ,
+Wsquid:S1068"4Remove this unused "sourceHorizontal" private field.(€ÇĞ§úÿÿÿÿ8á¯ŠŸÀ,
+squid:S00116"]Rename this field "DigrapghHorizontal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(èñÅüÿÿÿÿÿ8”Ò°ü¿,
+nsquid:CommentedOutCodeLine "<This block of commented-out lines of code should be removed.(É§Ìúÿÿÿÿ8á¯ŠŸÀ,
+Ysquid:S1068"6Remove this unused "DigrapghHorizontal" private field.(èñÅüÿÿÿÿÿ8á¯ŠŸÀ,
+Usquid:S1068"7Remove this unused "destinationVertical" private field.(åÃ€æ8á¯ŠŸÀ,
+Wsquid:UnusedPrivateMethod"+Remove this unused private "intToY" method.(‹ùØÔ8á¯ŠŸÀ,
 zsquid:S00116
 "[Rename this field "DigrapghVertical" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·¼±º8”Ò°ü¿,
-psquid:S00117:"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÖÀÍ‰8”Ò°ü¿,
-squid:S00116"]Rename this field "DigrapghHorizontal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(èñÅüÿÿÿÿÿ8”Ò°ü¿,
-usquid:S00117$"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÑËöÿşÿÿÿÿ8”Ò°ü¿,
-usquid:S00117'"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ì’Áùÿÿÿÿ8”Ò°ü¿,
-vsquid:S00117–"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( Ñ²”úÿÿÿÿ8‘“«ı¿,
-psquid:S00117d"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ç¥Æ½8‘“«ı¿,
-psquid:S001177"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß¯›8”Ò°ü¿,
+qsquid:S3776¬"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(éêƒ€8á¯ŠŸÀ,
+\squid:UnusedPrivateMethod"+Remove this unused private "intToX" method.(›÷–ıÿÿÿÿ8á¯ŠŸÀ,
+\squid:S1068"9Remove this unused "destinationHorizontal" private field.(«©Íƒùÿÿÿÿ8á¯ŠŸÀ,
 8squid:S1220""Move this file to a named package.8”Ò°ü¿,
-Œ squid:ForLoopCounterChangedCheck°"XRefactor the code in order to not assign to this loop counter from within the loop body.(‹Ó‚ï8‘“«ı¿,
-rsquid:S001001"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Á¦Ÿûÿÿÿÿ8”Ò°ü¿,
-rsquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(É§Ìúÿÿÿÿ8”Ò°ü¿,
-Œ squid:ForLoopCounterChangedCheckÌ"XRefactor the code in order to not assign to this loop counter from within the loop body.(‹Ó‚ï8‘“«ı¿,
-qsquid:S00117Œ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾˜Ï8åôñş¿,
+psquid:S00117g"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ç¥Æ½8‘“«ı¿,
+Rsquid:S1068
+"4Remove this unused "DigrapghVertical" private field.(·¼±º8á¯ŠŸÀ,
+Zsquid:UselessImportCheck"/Remove this unused import 'java.util.Iterator'.(¥ÍòÕ8á¯ŠŸÀ,

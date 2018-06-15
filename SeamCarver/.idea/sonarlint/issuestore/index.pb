@@ -11,3 +11,5 @@ B
 src/ShowSeams.java,f/a/fa88b86c986493c077b27512e11db01d78e87d41
 D
 src/PrintEnergy.java,0/8/08622e26d0ccfbe362cd52743d8a4cdbac4b8318
+C
+src/ResizeDemo.java,4/d/4d444ed14a2a9741d3be7589d38ef9b152402548
