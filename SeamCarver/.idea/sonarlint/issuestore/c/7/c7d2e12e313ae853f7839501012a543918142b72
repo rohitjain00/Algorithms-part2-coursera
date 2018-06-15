@@ -1,0 +1,16 @@
+
+zsquid:S00116
+"[Rename this field "DigrapghVertical" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·¼±º8”Ò°ü¿,
+psquid:S00117:"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÖÀÍ‰8”Ò°ü¿,
+squid:S00116"]Rename this field "DigrapghHorizontal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(èñÅüÿÿÿÿÿ8”Ò°ü¿,
+usquid:S00117$"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÑËöÿşÿÿÿÿ8”Ò°ü¿,
+usquid:S00117'"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ì’Áùÿÿÿÿ8”Ò°ü¿,
+vsquid:S00117–"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( Ñ²”úÿÿÿÿ8‘“«ı¿,
+psquid:S00117d"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ç¥Æ½8‘“«ı¿,
+psquid:S001177"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß¯›8”Ò°ü¿,
+8squid:S1220""Move this file to a named package.8”Ò°ü¿,
+Œ squid:ForLoopCounterChangedCheck°"XRefactor the code in order to not assign to this loop counter from within the loop body.(‹Ó‚ï8‘“«ı¿,
+rsquid:S001001"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Á¦Ÿûÿÿÿÿ8”Ò°ü¿,
+rsquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(É§Ìúÿÿÿÿ8”Ò°ü¿,
+Œ squid:ForLoopCounterChangedCheckÌ"XRefactor the code in order to not assign to this loop counter from within the loop body.(‹Ó‚ï8‘“«ı¿,
+qsquid:S00117Œ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾˜Ï8åôñş¿,
