@@ -249,7 +249,7 @@ public class SeamCarver {
          throw new IllegalArgumentException();
         }
         for (int i = 0; i < seam.length-1; i++) {
-            if (seam[i] >= picture.height() || Math.abs(seam[i]-seam[i+1]) > 1) {
+            if (seam[i] >= picture.width() || Math.abs(seam[i]-seam[i+1]) > 1) {
                 throw new IllegalArgumentException("Inappropriate numbers in seam array");
             }
         }
