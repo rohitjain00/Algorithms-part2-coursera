@@ -1,0 +1,18 @@
+
+8squid:S1220""Move this file to a named package.8§…ÊÑÀ,
+vsquid:S1450"SRemove the "sink" field and declare it as a local variable in the relevant methods.(‚Ëùşüÿÿÿÿ8§…ÊÑÀ,
+\squid:UnusedPrivateMethodC"+Remove this unused private "intToX" method.(›÷–ıÿÿÿÿ8§…ÊÑÀ,
+Ksquid:S1612Š",Replace this lambda with a method reference.(€ñ¢8§…ÊÑÀ,
+nsquid:S00116"ORename this field "Team" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓÆÊß8§…ÊÑÀ,
+[
+squid:S106&"9Replace this use of System.out or System.err by a logger.(ğÂ¾üûÿÿÿÿ8Ì‡ÚÑÀ,
+ssquid:S1450"URemove the "source" field and declare it as a local variable in the relevant methods.(’¢Å8§…ÊÑÀ,
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÒÏöüÿÿÿÿ8ñµ×ÑÀ,
+Wsquid:UnusedPrivateMethodF"+Remove this unused private "intToY" method.(‹ùØÔ8§…ÊÑÀ,
+lsquid:S00116"MRename this field "FF" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÁÈÛ†8§…ÊÑÀ,
+dsquid:S1126y"AReplace this if-then-else statement by a single return statement.(é“ ©øÿÿÿÿ8§…ÊÑÀ,
+[
+squid:S106$"9Replace this use of System.out or System.err by a logger.(­ª§æùÿÿÿÿ8Ú«ÙÑÀ,
+usquid:S00117["QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğš¢ãûÿÿÿÿ8§…ÊÑÀ,
+Rsquid:S1172"/Remove this unused method parameter "filename".(¼«•úÿÿÿÿ8§…ÊÑÀ,
