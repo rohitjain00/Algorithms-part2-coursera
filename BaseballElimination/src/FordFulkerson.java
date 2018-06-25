@@ -57,10 +57,6 @@ public class FordFulkerson {
         return marked[t];
     }
 
-    public double value(){
-        return value;
-    }
-
     public boolean inCut(int v){
         return marked[v];
     }

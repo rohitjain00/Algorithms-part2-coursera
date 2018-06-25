@@ -1,5 +1,6 @@
 import edu.princeton.cs.algs4.FlowEdge;
 import edu.princeton.cs.algs4.FlowNetwork;
+import edu.princeton.cs.algs4.StdOut;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -22,17 +23,18 @@ public class BaseballElimination {
 
     public BaseballElimination(String filename) {
         try{
-            BufferedReader br = new BufferedReader(new FileReader(filename));
+            final BufferedReader br = new BufferedReader(new FileReader(filename));
             String line;
-            Team=new ArrayList<>();
             int i=0;
             int first=1;
+            System.out.println("Hello ");
             try{
                 while ((line=br.readLine())!=null) {
-
+                System.out.println(line);
                     // process the line.
                     if(first==1){
                         first=0;
+                        Team=new ArrayList<>();
                         noOfTeams = Integer.parseInt(line);
                         w=new ArrayList<>();
                         l = new ArrayList<>();
@@ -54,13 +56,13 @@ public class BaseballElimination {
                 }
             }
             catch(Exception e){
-                System.out.println("Hi "+e.getMessage());
+                System.out.println(e.getMessage());
             }
             try{
                 br.close();
             }
             catch(Exception e){
-                System.out.println("Hi2 " +e.getMessage());
+                System.out.println(e.getMessage());
             }
         }
         catch(FileNotFoundException fnfe) {
@@ -107,13 +109,6 @@ public class BaseballElimination {
         int team2ID = Team.indexOf(team2);
         return this.g[team1ID][team2ID];
     }    // number of remaining games between team1 and team2
-
-    private int intToX(int a) {
-        return a % noOfTeams;
-    }
-    private int intToY(int a) {
-        return a / noOfTeams;
-    }
 
     private int xyTo1D(int x, int y) {
         return (x * noOfTeams) + y + numberOfTeams();
@@ -175,12 +170,10 @@ public class BaseballElimination {
         if (team == null) {
             throw new IllegalArgumentException("This team cannot be Processed");
         }
-
         if (!isEliminated(team)) {
             return null;
         }
         ArrayList<String> teamsInCut = new ArrayList<>();
-
         for (int teamID = 0; teamID < noOfTeams; teamID ++) {
             if (FF.inCut(teamID)) {
                 teamsInCut.add(Team.get(teamID));
@@ -189,5 +182,19 @@ public class BaseballElimination {
         return teamsInCut::iterator;
 
     } // subset R of teams that eliminates given team; null if not eliminated
-
+    public static void main(String[] args) {
+        BaseballElimination division = new BaseballElimination(args[0]);
+        for (String team : division.teams()) {
+            if (division.isEliminated(team)) {
+                StdOut.print(team + " is eliminated by the subset R = { ");
+                for (String t : division.certificateOfElimination(team)) {
+                    StdOut.print(t + " ");
+                }
+                StdOut.println("}");
+            }
+            else {
+                StdOut.println(team + " is not eliminated");
+            }
+        }
+    }
 }

@@ -1,4 +1,5 @@
 
-osquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§Î…8§…ÊÑÀ,
-8squid:S1220""Move this file to a named package.8§…ÊÑÀ,
-osquid:S00117%"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€¾‡q8§…ÊÑÀ,
+osquid:S00117%"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€¾‡q8ùœƒêÀ,
+Gsquid:S1068	")Remove this unused "value" private field.(ÔãÑ±8ÍåëôÁ,
+8squid:S1220""Move this file to a named package.8ùœƒêÀ,
+osquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§Î…8ùœƒêÀ,
