@@ -58,8 +58,12 @@ public class BoggleSolver
                 DFS(n, visited, wordsFound, iteratedString);
             }
         }
-        iteratedString.substring(0, iteratedString.length() - 1);
-        visited[v] = false;
+        if (iteratedString.endsWith("Qu")) {
+            iteratedString.substring(0, iteratedString.length() - 2);
+        } else {
+            iteratedString.substring(0, iteratedString.length() - 1);
+        }
+            visited[v] = false;
     }
     private int xyto1d(int i,int j) {
         return i * board.cols() + j;

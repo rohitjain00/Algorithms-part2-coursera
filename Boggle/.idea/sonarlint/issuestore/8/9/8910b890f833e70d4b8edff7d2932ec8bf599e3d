@@ -1,0 +1,7 @@
+
+Psquid:S2201>"-The return value of "substring" must be used.(ÛŸæ¯şÿÿÿÿ8•´óÜÃ,
+‹ squid:ForLoopCounterChangedCheck'"XRefactor the code in order to not assign to this loop counter from within the loop body.(Â¨•ù8ÌÒéÜÃ,
+Rsquid:EmptyStatementUsageCheck"Remove this empty statement.(ë®•ºùÿÿÿÿ8ÌÒéÜÃ,
+msquid:S00100."NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æÀ…¥8ÌÒéÜÃ,
+1squid:S1220""Move this file to a named package.
+Psquid:S2201@"-The return value of "substring" must be used.(˜¼Ïùùÿÿÿÿ8ÌÒéÜÃ,
