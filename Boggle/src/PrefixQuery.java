@@ -19,7 +19,7 @@ public class PrefixQuery {
               isEndOfWord = false;
               for (int i = 0; i < ALPHABET_SIZE; i++) children[i] = null;
             }
-      };
+      }
 
       static TrieNode root;
 
@@ -56,7 +56,7 @@ public class PrefixQuery {
             pCrawl = pCrawl.children[index];
         }
 
-        return (pCrawl != null && pCrawl.isEndOfWord);
+        return (pCrawl != null);
     }
 }
       
