@@ -18,11 +18,10 @@ public class BoggleSolver
 
     // Returns the set of all valid words in the given Boggle board, as an Iterable.
     public Iterable<String> getAllValidWords(BoggleBoard board) {
-        System.out.println(board.toString());
         this.board = board;
 
         //using DFS for finding all the words in the boggleboard
-        Boolean[] visited;
+        Boolean[] visited;;
         ArrayList<String> wordsFound = new ArrayList<>();
         String iteratedString = "";
 
@@ -33,12 +32,15 @@ public class BoggleSolver
             }
             DFS(i,visited,wordsFound,iteratedString);
         }
-        System.out.print(wordsFound.toString());
-        return (Iterable<String>) wordsFound.iterator();
-    }
-
-    private int xyto1d(int i,int j) {
-        return i * board.cols() + j;
+        for(int i=0;i<wordsFound.size()-1;i++){
+          for (int j =i+1; j < wordsFound.size(); j++) {
+                if (wordsFound.get(i).equals(wordsFound.get(j))) {
+                    wordsFound.remove(j);
+                    j--;
+            }
+                }
+        }
+        return () -> (Iterator<String>) wordsFound.iterator();
     }
 
     private void DFS(int v, Boolean[] visited, ArrayList<String> wordsFound,String iteratedString){
@@ -56,12 +58,17 @@ public class BoggleSolver
                 DFS(n, visited, wordsFound, iteratedString);
             }
         }
+        iteratedString.substring(0, iteratedString.length() - 1);
+        visited[v] = false;
+    }
+    private int xyto1d(int i,int j) {
+        return i * board.cols() + j;
     }
 
     private boolean isValidCoordinates(int i, int j) {
         return (i >= 0 && j >= 0) && (i < board.rows() && j < board.cols());
     }
-    private ArrayList getAdjacent(int v) {
+    private ArrayList<Integer> getAdjacent(int v) {
         int i = v / board.cols();
         int j = v % board.cols();
 
