@@ -7,6 +7,14 @@ public class MoveToFront {
     private static int R = 256;// all ASCII characters
 
     // apply move-to-front encoding, reading from standard input and writing to standard output
+    /**
+     * Given a text file in which sequences of the same character occur near each other many times,
+     * convert it into a text file in which certain characters appear more frequently than others.
+     *
+     * The main idea of move-to-front encoding is to maintain an ordered sequence of the characters in the alphabet,
+     * and repeatedly read a character from the input message,
+     * print out the position in which that character appears, and move that character to the front of the sequence.
+     */
     public static void encode() {
 
         String s = BinaryStdIn.readString();
@@ -26,7 +34,14 @@ public class MoveToFront {
 
         BinaryStdOut.close();
     }
-
+    /**
+     * Given a text file in which certain characters appear more frequently than others and convert it into,
+     * a text file in which sequences of the same character occur near each other many times.
+     *
+     * The main idea of move-to-front decoding is to maintain an ordered sequence of the characters in the alphabet,
+     * and repeatedly read a character from the input message,
+     * print out the character appears, and move that character to the front of the sequence.
+     */
     // apply move-to-front decoding, reading from standard input and writing to standard output
     public static void decode() {
         String s = BinaryStdIn.readString();

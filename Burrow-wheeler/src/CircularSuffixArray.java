@@ -10,6 +10,12 @@ public class CircularSuffixArray {
     private int row;
     private char[] t;
 
+    /**
+     * This data type makes all the rotation of the string and helps to make an relation between String's rotation to Sorted string's order
+     * which is index array
+     * @param s Requires a string to convert and make index array
+     */
+
     public CircularSuffixArray(String s) {
         if (s == null) {
             throw new IllegalArgumentException("String you provided is null");
@@ -50,20 +56,40 @@ public class CircularSuffixArray {
 
     }   // circular suffix array of s
 
+    /**
+     * This method return the list of the sorted arraays
+     * @return sortedSuffix is the array that is sorted lexicographically
+     */
     public List<String> sortedSuffix() {
         return sortedlSuffixes;
     }
 
+    /**
+     * @return row with zero is the row number in sorted string array that contains the string equal to the orignal string
+     */
     public int rowWithZero() {
         return row;
     }
+
+    /**
+     * @return t array is the array of characters made from the last character of each of the string present in sortedStrings
+     */
     public char[] t() {
         return t;
     }
 
+    /**
+     * @return the length of the string it has been provided with
+     */
     public int length() {
         return orignalString.length();
     }                    // length of s
+
+    /**
+     * @param i takes an int as input and return the i th index of the index array that states at what position does the orignal string's ith rotation appears
+     *          in the sorted string
+     * @return the position of the index ith value
+     */
     public int index(int i){
         return index[i];
     }                 // returns index of ith sorted suffix
