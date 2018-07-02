@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"<Unnamed>","l":"BurrowsWheeler"},{"p":"<Unnamed>","l":"CircularSuffixArray"},{"p":"<Unnamed>","l":"MoveToFront"}]
