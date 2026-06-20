@@ -13,12 +13,35 @@ public class WordNet {
     private ArrayList<ArrayList<String>> nounsArrayList;
     private ArrayList<String> allNouns;
 
-    // constructor takes the name of the two input files
     public WordNet(String synsets, String hypernyms) {
-        In inH = new In(hypernyms);
+        allNouns = new ArrayList<String>();
+        nounsArrayList = new ArrayList<ArrayList<String>>();
+        
         In inS = new In(synsets);
-        Digraph = new Digraph(inH);
+        int maxId = 0;
+        List<String> SeperateCSV;
+        List<String> SeperateNouns;
+        while (inS.hasNextLine()) {
+            String nouns = inS.readLine();
+            SeperateCSV = Arrays.asList(nouns.split(","));
+            int id = parseInt(SeperateCSV.get(0));
+            maxId = Math.max(maxId, id);
+            SeperateNouns = Arrays.asList(SeperateCSV.get(1).split(" "));
 
+            ArrayList<String> tempArrayList = new ArrayList<>();
+            for (int i = 0 ; i < SeperateNouns.size(); i++) {
+                tempArrayList.add(SeperateNouns.get(i));
+                allNouns.add(SeperateNouns.get(i)); // fixed to just add
+            }
+            // Ensure capacity to avoid IndexOutOfBounds
+            while (nounsArrayList.size() <= id) {
+                nounsArrayList.add(new ArrayList<String>());
+            }
+            nounsArrayList.set(id, tempArrayList);
+        }
+
+        Digraph = new Digraph(maxId + 1);
+        In inH = new In(hypernyms);
         List<String> hypernymList;
         while (inH.hasNextLine()) {
             String hypernym = inH.readLine();
@@ -27,21 +50,6 @@ public class WordNet {
             for (int i = 1; i < hypernymList.size(); i++) {
                 Digraph.addEdge(parseInt(hypernymList.get(0)), parseInt(hypernymList.get(i)));
             }
-        }
-        ArrayList<String> nounsArray = new ArrayList<>();
-        List<String> SeperateCSV;
-        List<String> SeperateNouns;
-        while (inS.hasNextLine()) {
-            String nouns = inS.readLine();
-            SeperateCSV = Arrays.asList(nouns.split(","));
-            SeperateNouns = Arrays.asList(SeperateCSV.get(1).split(" "));
-
-            ArrayList<String> tempArrayList = new ArrayList<>();
-            for (int i = 0 ; i < SeperateNouns.size(); i++) {
-                tempArrayList.add(SeperateNouns.get(i));
-                allNouns.add(parseInt(SeperateCSV.get(0)),SeperateNouns.get(i));
-            }
-            nounsArrayList.add(parseInt(SeperateCSV.get(0)),tempArrayList);
         }
     }
 
